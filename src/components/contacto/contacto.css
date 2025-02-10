@@ -1,0 +1,10 @@
+.contacto{
+	min-height: 100vh;
+	margin-top: 50px;
+}
+
+.mapa{
+	border: none;
+	width: 100%;
+	min-height: 50vh;
+}

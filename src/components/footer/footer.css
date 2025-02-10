@@ -1,0 +1,16 @@
+footer{
+	background-color: var(--gray-dark);
+	color: var(--gray-100);
+	padding: 10px;
+	  box-shadow: -2px 195px 0px 200px var(--gray-dark);
+}
+
+@media(max-width:900px){
+	footer{
+		font-size: 14px;
+	}
+}
+
+footer>a{
+/*	color: var(--gray-100);*/
+}

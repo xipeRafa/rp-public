@@ -1,0 +1,49 @@
+/*#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}*/
+
+
+
+
+
+
+
+
+/*section{
+  border: 2px solid blue;
+}*/
+
+
+
+
+.sombra{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+
+.d-nonde{
+  display: none;
+}
+
+button{
+  text-transform: uppercase!important;
+}
+
+/*.whatsapp{
+    position: fixed;
+    top: 80%; left: calc(100% - 100px);
+    width: 100px;
+}
+
+@media(max-width:900px){
+  .whatsapp{
+      position: fixed;
+    top: 90%; left: calc(100% - 60px);
+      width: 60px;
+  } 
+}*/

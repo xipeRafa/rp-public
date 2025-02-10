@@ -1,0 +1,99 @@
+
+
+.navBar{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: calc(100%);
+    margin-bottom: 10px;
+}
+
+
+.menuX{
+    color: white;
+}
+
+
+/* rojo */
+.menu { 
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0px;
+    background-color: var(--logoColor);
+    user-select: none;
+  
+
+}
+
+/* gris */
+.hamburger {
+    height: 50px;
+    padding:  16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: var(--logoColor);
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+.active {
+    color: rgba(149, 17, 17, 0.47);
+}
+
+.menu-bar {
+    width: 26px;
+    cursor: pointer;
+}
+
+.uno,
+.dos,
+.tres {
+    background: #ffffff;
+    height: 4px;
+}
+
+.dos {
+    margin: 4px 0;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+          border-top:1px solid var(--gold);
+        position: fixed;
+        left: -1100px;
+            height: 100vh;
+               justify-content: start;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .hamburger {
+        display: none;
+      
+    }
+}
+
+
+.display {
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    transition: .4s;
+}
+
+.navBar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px 10px;
+ }
+.menu>a:hover   {
+   background-color: rgba(0, 0, 0, .2);
+   color: white;
+}

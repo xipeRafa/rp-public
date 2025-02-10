@@ -1,0 +1,50 @@
+header{
+  padding: 40px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
+  background-color: white;
+  box-shadow: rgba(30, 30, 93, 0.1) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  color: var(--gray-700);
+}
+
+
+header>span{
+  color:var(--gold);
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+
+
+.imgsHeader1{
+    display: block;
+}
+
+.imgsHeader2{
+  display: none;
+}
+
+
+
+
+@media(max-width:900px){
+  header>p{
+    font-size: 17px;
+  }
+
+
+.imgsHeader1{
+  display: none;
+}
+
+.imgsHeader2{
+  display: block;
+}
+
+header{
+  padding: 40px 10px;
+}
+
+}
