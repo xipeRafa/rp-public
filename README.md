@@ -9,6 +9,6 @@ Currently, two official plugins are available:
 
 
 
-https://xiperafa.github.io/MLJM/
+https://xiperafa.github.io/rp-public
 # MLJM
 # rp-public
