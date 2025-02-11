@@ -1,6 +1,4 @@
 import './header.css'
-import mom from "../../imgs/mom.webp";
-import large from "../../imgs/large.webp";
 
 
 import { useState } from "react";
