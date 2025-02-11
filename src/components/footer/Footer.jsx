@@ -11,7 +11,7 @@ export default function Footer() {
 
             <footer>
                   
-				CONTACTO:<br />
+			{/*	CONTACTO:<br />
 				Miroslava Saavedra  <span>📱 662 120 8382 </span><br />
 				<hr />
 
@@ -29,7 +29,10 @@ export default function Footer() {
 				 <br />
 				<hr />
 				Arquidiócesis de Hermosillo <br />
-				Hermosillo, Sonora <br />
+				Hermosillo, Sonora <br />*/}
+
+
+            <h1>Respalder Parroquial</h1>
 
 
             </footer>

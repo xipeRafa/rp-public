@@ -38,7 +38,10 @@ header>span{
   position: fixed;
   height: 80%;
   box-shadow: 11px 0px 0px 200px rgba(0,0,0,.8);
+  z-index: 9999;
 }
+
+
 
 
 .inModal{
@@ -62,6 +65,11 @@ header>span{
   border:1px solid transparent!important;
   text-align: right!important;
 }
+@media(max-width:900px){
+  .btnCerrar{
+    display: none!important;
+  }
+}
 
 .btnCerrar:hover{
   border: 1px solid red!important;
@@ -71,12 +79,10 @@ header>span{
   color: rgba(156, 156, 156, 1);
   letter-spacing: .2px;
   font-family: serif;
-  margin-bottom:30px!important;
+  margin-bottom:24px!important;
 }
 
-.contactForm input[type='text'],input[type='button']{
-    margin-bottom: 20px;
-}
+
 
 .btnEnviar{
     width:100%;
@@ -84,6 +90,7 @@ header>span{
     border-radius: 10px!important;
     height: 38px;
     margin-top:30px;
+    margin-bottom:40px;
 /*    box-shadow: rgba(33, 67, 180, .2) 0px -50px 26px -38px inset;*/
     box-shadow: rgba(33, 67, 130, .3) 0px -50px 26px -38px inset;
     text-transform: uppercase;
@@ -91,7 +98,7 @@ header>span{
     color: rgba(33, 67, 90);
     font-weight: 500;
     letter-spacing: .4px;
-      font-size: 22px!important;
+    font-size: 18px!important;
 }
 
 

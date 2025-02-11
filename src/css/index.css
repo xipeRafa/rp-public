@@ -269,8 +269,9 @@ img{width: 100%;}
     border-radius: 2px;
     box-shadow: none;
     box-sizing: border-box;
-    color: #555;
+    color: #777;
     font-weight: 300;
+    margin-bottom: 20px;
   }
   /* Removes awkward default styles on some inputs for iOS */
   input[type="email"],
@@ -308,6 +309,7 @@ img{width: 100%;}
   select:focus {
     border: 1px solid #33c3f0;
     outline: 0;
+    color: #222;
   }
   label,
   legend {
@@ -388,7 +390,7 @@ img{width: 100%;}
     font-size: 90%;
   }
   li {
-    margin-bottom: 1rem;
+/*    margin-bottom: 1rem;*/
   }
   
   /* Code
