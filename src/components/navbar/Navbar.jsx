@@ -35,13 +35,13 @@ export default function Navbar() {
             <div className={isActive ? "menu " : "menu display"} onClick={InWidth}>
 
 
-                <NavLink to="/MLJM" onClick={()=>window.scrollTo(0,0)}> Inicio </NavLink>
+                <NavLink to="/rp-public" onClick={()=>window.scrollTo(0,0)}> Inicio </NavLink>
 
-                <NavLink to="/MLJM/GRUPO" onClick={()=>window.scrollTo(0,0)}> GRUPO </NavLink>
+                <NavLink to="/rp-public/GRUPO" onClick={()=>window.scrollTo(0,0)}> GRUPO </NavLink>
 
-                <NavLink to="/MLJM/CENACULOS" onClick={()=>window.scrollTo(0,0)}> CENACULOS </NavLink>
+                <NavLink to="/rp-public/CENACULOS" onClick={()=>window.scrollTo(0,0)}> CENACULOS </NavLink>
 
-                <NavLink to="/MLJM/CONSAGRACIONES" onClick={()=>window.scrollTo(0,0)}> CONSAGRACIONES </NavLink>
+                <NavLink to="/rp-public/CONSAGRACIONES" onClick={()=>window.scrollTo(0,0)}> CONSAGRACIONES </NavLink>
 {/*
                 <NavLink to="/MLJM/licencias" onClick={()=>window.scrollTo(0,0)}> Licencias </NavLink>
 

@@ -3,19 +3,34 @@ import mom from "../../imgs/mom.webp";
 import large from "../../imgs/large.webp";
 // import Banner from '../banner/Banner'
 
+import { useState } from "react";
+
+
+
+
 export default function Header() {
 
+
+
+     const [isActive, setIsActive] = useState(true);
 
  return ( <> 
 
   <header>
-      <h2>MOVIMIENTO LAICAL A JESÚS POR MARÍA</h2>
 
-      <span>JxM</span>
+      <span>Respalder Parroquial</span>
       <br />  
       <br />
 
-      <p>En este tiempo de gran confusión y perdida de la vida cristiana, el Espíritu Santo ha suscitado en la Iglesia católica las consagraciones.</p>
+      <p>Solicita tus Credenciales para Usar Respalder Parroquial </p>
+      <p>Un Servicio de Respaldo y Ordenamiento de los Documentos de la Parroquia </p>
+      <p>Simplifica la Gestión Administrativa de los Sacramentos Religiosos</p>
+
+
+
+      <input type='button' value='Solicitar Cuenta' onClick={() => setIsActive(!isActive)}/>
+
+      <p>Galeria de Planes</p>
 
 
       <div className="sombra imgsHeader">
@@ -26,16 +41,23 @@ export default function Header() {
             {/*<Banner />*/}
       <br /> 
 
-            
      
-      <p>Las consagraciones, son obra del Espíritu Santo</p> 
+      <form className={isActive ? "contactForm outModal" : "contactForm inModal"}>
 
-      <p>que mediante distintas devociones provocan en los fieles una conversión, y 
-      nos ofrecen un camino de vuelta hacia la eterna y definitiva Consagración Bautismal.</p>
+        <input type='button' value='Cancelar ✘' className='btnCerrar' onClick={() => setIsActive(!isActive)}/>
 
-      <p>Existen muchas devociones que llevan a realizar dichas consagraciones para renovar la Consagración Bautismal de los fieles.</p>
+        <h3 className='tituloEnviar'>ENVIAR SOLICITUD DE CUENTA</h3>
 
-      <p>En la Arquidiócesis de Hermosillo, nuestro Movimiento Laical a Jesús por María cuenta con autorización y reconocimiento de nuestro Arzobispo.</p>
+        <input type='text' placeholder='Nombre'/>
+        <input type='text' placeholder='Nombre de Parroquia'/>
+        <input type='text' placeholder='Dirección'/>
+
+        <input type='text' placeholder='Correo'/>
+        <input type='text' placeholder='# de contacto (opcional)' />
+
+        <input type='submit' className='btnEnviar' value='Enviar' />
+
+      </form>
 
 
 
