@@ -103,7 +103,10 @@ header>span{
     font-size: 18px!important;
 }
 
-
+.galeriaDePlanes{
+  font-family: serif;
+  letter-spacing: .4px;
+}
 
 
 @media(max-width:900px){

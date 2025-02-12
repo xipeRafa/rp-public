@@ -2,8 +2,6 @@ import './header.css'
 
 import title from "../../imgs/title.webp";
 import titleMobil from "../../imgs/titleMobil.webp";
-import footer from "../../imgs/footer.webp";
-import footerMobil from "../../imgs/footerMobil.webp";
 
 import { useState, useEffect } from "react";
 
@@ -47,7 +45,6 @@ export default function Header() {
       numero:''
      })
 
-     console.log(state)
 
 
      const {name,parroquia,direccion,correo,numero}=state
@@ -72,13 +69,12 @@ export default function Header() {
     useEffect(()=>{
          if (windowWidth < 999) {
             setWindowWidthState(false);
-            console.log('menor a 999 !!!!!!!!!')
         }
     },[windowWidthState])
        
   
 
-    console.log(windowWidth, windowWidthState)
+
 
     const onSubmit=(e)=>{
       e.preventDefault();
@@ -104,19 +100,19 @@ export default function Header() {
 
 
  return ( <> 
-
+     {windowWidthState ? <img className='sombra' src={title}  /> : <img className='sombra' src={titleMobil}  />}
   <header>
 
-      {windowWidthState ? <img src={title}  /> : <img src={titleMobil}  />}
+     
 
       <br />  
-      <br />
-       <br /> <br />
+
+  
 
       <p>Solicita tus Credenciales para Usar Respalder Parroquial Gratis !!</p>
       <p>Un Servicio de Respaldo y Ordenamiento de los Documentos de la Parroquia </p>
       <p>Simplifica la Gestión Administrativa de los Documentos Religiosos</p>
- <br />
+
 
 
       <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActiveModal(!isActiveModal)}/>
@@ -126,20 +122,18 @@ export default function Header() {
 
  <br /> <br />
 
-      <h2>-- GALERIA DE PLANES --</h2> 
+      <h2 className='galeriaDePlanes'>GALERIA DE PLANES</h2> 
         <br />   <br /> 
      
-            <PriceGallery />
-
-
-  <br />   <br /> 
-            <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActiveModal(!isActiveModal)}/>
+      <PriceGallery />
 
 
 
-      <div className="">
-        {windowWidthState ? <img src={footer}  /> : <img src={footerMobil}  />}
-      </div>
+      <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActiveModal(!isActiveModal)}/>
+
+
+
+    
     
 
 
@@ -166,6 +160,8 @@ export default function Header() {
 
 
   </header>
+
+  {windowWidthState ? <img className='sombra' src={title}  /> : <img className='sombra' src={titleMobil}  />}
 
       </> )
  }
