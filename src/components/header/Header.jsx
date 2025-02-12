@@ -1,8 +1,11 @@
 import './header.css'
 
 import title from "../../imgs/title.webp";
+import titleMobil from "../../imgs/titleMobil.webp";
+import footer from "../../imgs/footer.webp";
+import footerMobil from "../../imgs/footerMobil.webp";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import PriceGallery from '../priceGallery/PriceGallery'
 
@@ -34,7 +37,7 @@ export default function Header() {
 
 
 
-     const [isActive, setIsActive] = useState(true);
+     const [isActiveModal, setIsActiveModal] = useState(true);
 
      const [state, setState] = useState({
       name:'',
@@ -57,6 +60,26 @@ export default function Header() {
 
 
 
+
+
+
+
+
+    const [windowWidthState, setWindowWidthState] = useState(true);
+
+    const windowWidth = window.innerWidth;
+
+    useEffect(()=>{
+         if (windowWidth < 999) {
+            setWindowWidthState(false);
+            console.log('menor a 999 !!!!!!!!!')
+        }
+    },[windowWidthState])
+       
+  
+
+    console.log(windowWidth, windowWidthState)
+
     const onSubmit=(e)=>{
       e.preventDefault();
 
@@ -69,8 +92,11 @@ export default function Header() {
       correo:'',
       numero:''
      })
-        setIsActive(!isActive)
+        setIsActiveModal(!isActiveModal)
     }
+
+
+
 
 
 
@@ -81,8 +107,7 @@ export default function Header() {
 
   <header>
 
-
-        <img src={title}  />
+      {windowWidthState ? <img src={title}  /> : <img src={titleMobil}  />}
 
       <br />  
       <br />
@@ -94,7 +119,7 @@ export default function Header() {
  <br />
 
 
-      <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActive(!isActive)}/>
+      <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActiveModal(!isActiveModal)}/>
  <br /> <br />
 
       <lite-youtube videoid="ZNJ9fFANRa8"></lite-youtube>
@@ -108,18 +133,22 @@ export default function Header() {
 
 
   <br />   <br /> 
-            <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActive(!isActive)}/>
+            <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActiveModal(!isActiveModal)}/>
 
 
+
+      <div className="">
+        {windowWidthState ? <img src={footer}  /> : <img src={footerMobil}  />}
+      </div>
     
 
 
 
 
 
-      <form onSubmit={onSubmit} className={isActive ? "contactForm outModal" : "contactForm inModal "}>
+      <form onSubmit={onSubmit} className={isActiveModal ? "contactForm outModal" : "contactForm inModal "}>
 
-        <input type='button' value='Cancelar ✘' className='btnCerrar' onClick={() => setIsActive(!isActive)}/>
+        <input type='button' value='Cancelar ✘' className='btnCerrar' onClick={() => setIsActiveModal(!isActiveModal)}/>
 
         <h3 className='tituloEnviar'>ENVIAR SOLICITUD DE CUENTA</h3>
 

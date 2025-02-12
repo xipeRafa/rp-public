@@ -11,13 +11,13 @@ export default function PriceGallery() {
         </div>
         <ul className="plan-features">
           <li>
-            <i className="ion-checkmark"> </i>Prueba Gratis
-          </li>
-          <li>
             <i className="ion-checkmark"> </i>Primer Semana Gratis
           </li>
           <li>
             <i className="ion-checkmark"> </i>Tech Support
+          </li>
+          <li>
+            <i className="ion-checkmark transparent"> </i> 
           </li>
           <li>
             <i className="ion-checkmark transparent"> </i>
@@ -41,9 +41,6 @@ export default function PriceGallery() {
         </div>
         <ul className="plan-features">
           <li>
-            <i className="ion-checkmark"> </i> Prueba Gratis
-          </li>
-          <li>
             <i className="ion-checkmark"> </i> Primer Mes Gratis
           </li>
           <li>
@@ -53,6 +50,9 @@ export default function PriceGallery() {
             <i className="ion-checkmark "> </i> Tech Support
           </li>
           <li>
+            <i className="ion-checkmark transparent"> </i>
+          </li>
+           <li>
             <i className="ion-checkmark transparent"> </i>
           </li>
           <li>
