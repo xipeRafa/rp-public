@@ -17,13 +17,13 @@ export default function PriceGallery() {
             <i className="ion-checkmark"> </i>Tech Support
           </li>
           <li>
-            <i className="ion-checkmark transparent"> </i> 
+            <i className="ion-checkmark"> </i> Respalda en Cualquier Formato
           </li>
           <li>
-            <i className="ion-checkmark transparent"> </i>
+            <i className="ion-checkmark"> </i> Con Buscador por Nombre
           </li>
           <li>
-            <i className="ion-checkmark transparent"> </i>
+            <i className="ion-checkmark"> </i> Creación de Usuarios
           </li>
           <li>
             <i className="ion-checkmark transparent"> </i>
@@ -50,7 +50,7 @@ export default function PriceGallery() {
             <i className="ion-checkmark "> </i> Tech Support
           </li>
           <li>
-            <i className="ion-checkmark transparent"> </i>
+            <i className="ion-checkmark "> </i> Creación de Funciones a Medida
           </li>
            <li>
             <i className="ion-checkmark transparent"> </i>
