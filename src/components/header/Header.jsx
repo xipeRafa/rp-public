@@ -77,18 +77,34 @@ export default function Header() {
 
 
     const onSubmit=(e)=>{
-      e.preventDefault();
+        e.preventDefault();
+
+
+        if (
+              name.trim() === '' ||
+              parroquia.trim() === '' ||
+              direccion.trim() === '' ||
+              correo.trim() === ''
+        ) {
+              alert('Campo Vacío')
+              return
+        }
 
         state.idDate=Date.now()
         saveDemos(state)
+
         setState({
-      name:'',
-      parroquia:'',
-      direccion:'',
-      correo:'',
-      numero:''
-     })
+          name:'',
+          parroquia:'',
+          direccion:'',
+          correo:'',
+          numero:''
+        })
+
         setIsActiveModal(!isActiveModal)
+
+        alert('Solicitud Enviada Recibirá un Correo en las Próximas 24 Horas')
+
     }
 
 
@@ -146,12 +162,12 @@ export default function Header() {
 
         <h3 className='tituloEnviar'>ENVIAR SOLICITUD DE CUENTA</h3>
 
-        <input type='text' placeholder='Nombre' name='name' required onChange={(e)=>handlerState(e)} />
-        <input type='text' placeholder='Nombre de La Parroquia' name='parroquia' required onChange={(e)=>handlerState(e)}/>
-        <input type='text' placeholder='Dirección' name='direccion' required onChange={(e)=>handlerState(e)}/>
+        <input type='text' placeholder='Nombre' name='name' value={name} required onChange={(e)=>handlerState(e)} />
+        <input type='text' placeholder='Nombre de La Parroquia' name='parroquia' value={parroquia}  required onChange={(e)=>handlerState(e)}/>
+        <input type='text' placeholder='Dirección' name='direccion' value={direccion}  required onChange={(e)=>handlerState(e)}/>
 
-        <input type='email' placeholder='@ Correo' name='correo' required onChange={(e)=>handlerState(e)}/>
-        <input type='number' placeholder='# Numero de Contacto (opcional)' name='numero' required onChange={(e)=>handlerState(e)}/>
+        <input type='email' placeholder='@ Correo' name='correo' value={correo} required onChange={(e)=>handlerState(e)}/>
+        <input type='number' placeholder='# Numero de Contacto (opcional)' name='numero' value={numero} onChange={(e)=>handlerState(e)}/>
 
         <input type='submit' className='btnEnviar' value='Enviar' />
 
