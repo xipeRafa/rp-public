@@ -49,14 +49,16 @@ header>span{
 
   top:0;
   left: 0;
-  transition: .4s;
+  transition: .6s;
+
 }
 
 .outModal {
-    position: fixed;
     left: -150%;
-    transition: .4s;
+    transition: .6s;
 }
+
+
 
 .btnCerrar{
   background-color: rgba(120, 120, 130, .8)!important;

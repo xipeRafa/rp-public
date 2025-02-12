@@ -5,6 +5,9 @@ import { useState } from "react";
 
 import PriceGallery from '../priceGallery/PriceGallery'
 
+import { firestoreDB } from '../../firebase/firebaseConfig';
+
+import { collection, addDoc } from 'firebase/firestore'
 
 
 
@@ -12,7 +15,66 @@ export default function Header() {
 
 
 
+    const saveDemos = (postBody) => {
+        console.log(postBody)
+
+        const postCollectionDemos = collection(firestoreDB, 'Demos');
+
+        addDoc(postCollectionDemos, postBody)
+            .then((resp) => {
+                console.log(resp)
+            })
+            .catch((error) => { 
+                console.log('saveDemos Error')
+                console.log(error)
+            })
+
+    }
+
+
+
      const [isActive, setIsActive] = useState(true);
+
+     const [state, setState] = useState({
+      name:'',
+      parroquia:'',
+      direccion:'',
+      correo:'',
+      numero:''
+     })
+
+     console.log(state)
+
+
+     const {name,parroquia,direccion,correo,numero}=state
+
+
+
+     const handlerState=(e)=>{
+        setState({...state, [e.target.name]:e.target.value})
+     }
+
+
+
+    const onSubmit=(e)=>{
+      e.preventDefault();
+
+        state.idDate=Date.now()
+        saveDemos(state)
+        setState({
+      name:'',
+      parroquia:'',
+      direccion:'',
+      correo:'',
+      numero:''
+     })
+        setIsActive(!isActive)
+    }
+
+
+
+
+
 
  return ( <> 
 
@@ -46,18 +108,18 @@ export default function Header() {
 
 
 
-      <form className={isActive ? "contactForm outModal" : "contactForm inModal"}>
+      <form onSubmit={onSubmit} className={isActive ? "contactForm outModal" : "contactForm inModal "}>
 
         <input type='button' value='Cancelar ✘' className='btnCerrar' onClick={() => setIsActive(!isActive)}/>
 
         <h3 className='tituloEnviar'>ENVIAR SOLICITUD DE CUENTA</h3>
 
-        <input type='text' placeholder='Nombre'/>
-        <input type='text' placeholder='Nombre de La Parroquia'/>
-        <input type='text' placeholder='Dirección'/>
+        <input type='text' placeholder='Nombre' name='name' onChange={(e)=>handlerState(e)} />
+        <input type='text' placeholder='Nombre de La Parroquia' name='parroquia' onChange={(e)=>handlerState(e)}/>
+        <input type='text' placeholder='Dirección' name='direccion' onChange={(e)=>handlerState(e)}/>
 
-        <input type='email' placeholder='Correo'/>
-        <input type='text' placeholder='# de Contacto (opcional)' />
+        <input type='email' placeholder='@ Correo' name='correo' onChange={(e)=>handlerState(e)}/>
+        <input type='number' placeholder='# Numero de Contacto (opcional)' name='numero' onChange={(e)=>handlerState(e)}/>
 
         <input type='submit' className='btnEnviar' value='Enviar' />
 
