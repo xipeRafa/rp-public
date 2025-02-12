@@ -92,6 +92,11 @@ export default function Header() {
 
       <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActive(!isActive)}/>
 
+
+      <lite-youtube videoid="ZNJ9fFANRa8"></lite-youtube>
+
+
+
       <h2>GALERIA DE PLANES</h2> 
         <br />   <br /> 
      
