@@ -146,12 +146,12 @@ export default function Header() {
 
         <h3 className='tituloEnviar'>ENVIAR SOLICITUD DE CUENTA</h3>
 
-        <input type='text' placeholder='Nombre' name='name' onChange={(e)=>handlerState(e)} />
-        <input type='text' placeholder='Nombre de La Parroquia' name='parroquia' onChange={(e)=>handlerState(e)}/>
-        <input type='text' placeholder='Dirección' name='direccion' onChange={(e)=>handlerState(e)}/>
+        <input type='text' placeholder='Nombre' name='name' required onChange={(e)=>handlerState(e)} />
+        <input type='text' placeholder='Nombre de La Parroquia' name='parroquia' required onChange={(e)=>handlerState(e)}/>
+        <input type='text' placeholder='Dirección' name='direccion' required onChange={(e)=>handlerState(e)}/>
 
-        <input type='email' placeholder='@ Correo' name='correo' onChange={(e)=>handlerState(e)}/>
-        <input type='number' placeholder='# Numero de Contacto (opcional)' name='numero' onChange={(e)=>handlerState(e)}/>
+        <input type='email' placeholder='@ Correo' name='correo' required onChange={(e)=>handlerState(e)}/>
+        <input type='number' placeholder='# Numero de Contacto (opcional)' name='numero' required onChange={(e)=>handlerState(e)}/>
 
         <input type='submit' className='btnEnviar' value='Enviar' />
 
