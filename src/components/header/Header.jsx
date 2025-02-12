@@ -1,5 +1,6 @@
 import './header.css'
 
+import title from "../../imgs/title.webp";
 
 import { useState } from "react";
 
@@ -80,24 +81,27 @@ export default function Header() {
 
   <header>
 
-      <span>Respalder Parroquial</span>
+
+        <img src={title}  />
+
       <br />  
       <br />
+       <br /> <br />
 
-      <p>Solicita tus Credenciales para Usar Respalder Parroquial Gratis</p>
+      <p>Solicita tus Credenciales para Usar Respalder Parroquial Gratis !!</p>
       <p>Un Servicio de Respaldo y Ordenamiento de los Documentos de la Parroquia </p>
-      <p>Simplifica la Gestión Administrativa de los Sacramentos Religiosos</p>
-
+      <p>Simplifica la Gestión Administrativa de los Documentos Religiosos</p>
+ <br />
 
 
       <input type='button' className='btnEnviar' value='Solicitar Cuenta Gratis' onClick={() => setIsActive(!isActive)}/>
-
+ <br /> <br />
 
       <lite-youtube videoid="ZNJ9fFANRa8"></lite-youtube>
 
+ <br /> <br />
 
-
-      <h2>GALERIA DE PLANES</h2> 
+      <h2>-- GALERIA DE PLANES --</h2> 
         <br />   <br /> 
      
             <PriceGallery />
