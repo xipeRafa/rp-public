@@ -155,7 +155,11 @@ export default function Header() {
 
         <input type='submit' className='btnEnviar' value='Enviar' />
 
+        <input type='button' value='Cancelar ✘' className='btnCerrarDown' onClick={() => setIsActiveModal(!isActiveModal)}/>
+
       </form>
+
+
 
 
 
